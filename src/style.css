@@ -1,6 +1,7 @@
 :root {
   --main-color-gray: rgb(53, 53, 53);
-  --main-color-hover: rgb(255, 255, 255);
+  --main-color-hover: rgb(107, 107, 107);
+  --main-container-border: 8px 15px 15px 8px;
 }
 
 
@@ -23,13 +24,19 @@ h1 {
   margin: 0;
 }
 
+.drop-shadow-text {
+  -webkit-box-shadow: 6px 5px 5px 0px rgba(0,0,0,0.33);
+  -moz-box-shadow: 6px 5px 5px 0px rgba(0,0,0,0.33);
+  box-shadow: 6px 5px 5px 0px rgba(0,0,0,0.33);
+}
+
 .content-wrapper {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100%;
   width: 100%;
-
 }
 
 .main-container-background {
@@ -42,16 +49,116 @@ h1 {
   filter: blur(8px) grayscale(80%);
 }
 
+.main-container::before {
+  position: absolute;
+  height: 800px;
+  width: 800px;
+  content: "";
+  background: rgba(214, 214, 214,0.1);
+  border-radius: var(--main-container-border);
+  opacity: 1;
+}
+
 .main-container {
   display: flex;
   justify-content: space-evenly;
   flex-direction: column;
-  z-index: 2;
-  background: rgb(214, 214, 214);
+  z-index: 3;
   height: 800px;
   width: 800px;
-  border-radius: 1px;
-  opacity: 0.8;
+  border-radius: var(--main-container-border);
+  opacity: 1;
+  -webkit-box-shadow: inset 0px 0px 25px 0px rgba(43,34,16,1);
+  -moz-box-shadow: inset 0px 0px 25px 0px rgba(43,34,16,1);
+  box-shadow: inset 0px 0px 25px 0px rgba(43,34,16,1);
+}
+
+.main-container::after {
+  pointer-events: none;
+  position: absolute;
+  height: 800px;
+  width: 800px;
+  content: "";
+  background: rgb(0,0,0);
+  background: radial-gradient(circle, rgba(0,0,0,0) 0%, rgba(70,70,70,1) 200%);
+  border-radius: var(--main-container-border);
+} 
+
+.main-container-overlay-1 {
+  pointer-events: none;
+  z-index: 2;
+  position: absolute;
+  height: 800px;
+  width: 800px;
+  border-radius: var(--main-container-border);
+  background-image: url('./menu-cover.jpg');
+  opacity: 1;
+  -webkit-box-shadow: 0px 1px 3px 1px rgba(0,0,0,0.25);
+  -moz-box-shadow: 0px 1px 3px 1px rgba(0,0,0,0.25);
+  box-shadow: 0px 1px 3px 1px rgba(0,0,0,0.25);
+}
+
+.main-container-overlay-1::after {
+  pointer-events: none;
+  left: 0;
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: rgba(214, 214, 214, 0.3);
+  border-radius: var(--main-container-border);
+}
+
+.main-container-overlay-2 {
+  pointer-events: none;
+  z-index: 3;
+  position: absolute;
+  height: 800px;
+  width: 800px;
+  border-radius: var(--main-container-border);
+  opacity: 1;
+
+}
+
+.img-menu-overlay-2 {
+  pointer-events: none;
+  height: 129px;
+  width: 142px;
+  background-repeat: no-repeat;
+  background-image: url('./Menu-corner-piece.png');
+}
+
+.img-menu-top-corner {
+  position: absolute;
+  top: -5px;
+  right: -12px;
+  transform: rotate(-90deg);
+  filter: brightness(80%);
+}
+
+.img-menu-bottom-corner {
+  position: absolute;
+  
+  transform: scaleX(-1);
+  right: -12px;
+  bottom: -6px;
+  transform: rotate(90deg) scaleY(-1);
+  filter: brightness(70%);
+  
+}
+
+.img-menu-overlay-beam {
+  position: absolute;
+  left: 0;
+  height: 800px;
+  width: 50px;
+  opacity: .3;
+  border-radius: 0 0 0 8px;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,000000+100&1+0,0.77+22,0+52,0+82,0.74+100 */
+  background: -moz-linear-gradient(left,  rgba(0,0,0,1) 0%, rgba(0,0,0,0.77) 22%, rgba(0,0,0,0) 52%, rgba(0,0,0,0) 82%, rgba(0,0,0,0.74) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left,  rgba(0,0,0,1) 0%,rgba(0,0,0,0.77) 22%,rgba(0,0,0,0) 52%,rgba(0,0,0,0) 82%,rgba(0,0,0,0.74) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right,  rgba(0,0,0,1) 0%,rgba(0,0,0,0.77) 22%,rgba(0,0,0,0) 52%,rgba(0,0,0,0) 82%,rgba(0,0,0,0.74) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#bd000000',GradientType=1 ); /* IE6-9 */
 }
 
 /* Logo */
@@ -60,21 +167,28 @@ h1 {
   width: 100%;
 }
 
-
 .logo-container {
   height: auto;
   width: 100%;
-/*   background: rgba(255, 192, 203, .9);
- */}
+}
 
 .logo-text {
   height:100%;
   width: 100%;
 }
 
+.svg-logo-text {
+  font-family: 'Mrs Saint Delafield', cursive;
+  font-size: 3em;
+  fill: var(--main-color-gray);
+  height: auto;
+  width: 100%;
+}
+
 .logo-slogan {
   height: auto;
-  font-size: 1.5rem;
+  font-size: 1.5em;
+  margin: -2.5em;
 }
 
 
@@ -94,8 +208,6 @@ h1 {
   color: var(--main-color-hover);
 }
 
-
-
 /* Plate icon */
 .svg-icon-plate-container {
   height: auto;
@@ -105,6 +217,7 @@ h1 {
 .svg-icon-plate {
   height: 101px;
   width: 101px;
+  opacity: 0.9;
   
 }
 
@@ -116,3 +229,32 @@ h1 {
   font-size: 1.5em;
 }
 
+
+
+/*         MEDIA QUERIES            */
+@media (max-width: 575.98px) { 
+  .main-container {
+    border-radius: 5px;
+  }
+
+  .svg-logo-text {
+    font-size: 4em;
+  }
+  
+  .logo-slogan {
+    font-size: 1.0em;
+    margin: -1.9em;
+  }
+}
+
+@media (max-width: 767.98px) { 
+
+}
+
+@media (max-width: 991.98px) { 
+
+}
+
+@media (max-width: 1199.98px) { 
+
+}
