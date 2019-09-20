@@ -16,10 +16,7 @@ const layout = () => {
   /* Push to `#Content` */
   contentWrapper.appendChild(mainContainerBackground);
   contentWrapper.appendChild(mainContainer);
-
-
   
-
 }
 
-export { layout }
+export { mainContainer, layout }

@@ -1,4 +1,7 @@
+import { mainContainer } from './modules/layout'
 const intro = () => {
+  console.log('intro');
+  
   /* Logo */
 
   let logoMainContainer = document.createElement('div');
