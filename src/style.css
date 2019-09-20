@@ -1,0 +1,118 @@
+:root {
+  --main-color-gray: rgb(53, 53, 53);
+  --main-color-hover: rgb(255, 255, 255);
+}
+
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 16px;
+}
+
+body {
+  background: rgb(153, 153, 153);
+  color: rgb(53, 53, 53);
+  font-family: 'Alegreya', serif;
+  text-align: center;
+}
+
+h1 {
+  font-family: 'Mrs Saint Delafield', cursive;
+  font-size: 4em;
+  margin: 0;
+}
+
+.content-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+
+}
+
+.main-container-background {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: url('./restaurant-inside.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: blur(8px) grayscale(80%);
+}
+
+.main-container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  z-index: 2;
+  background: rgb(214, 214, 214);
+  height: 800px;
+  width: 800px;
+  border-radius: 1px;
+  opacity: 0.8;
+}
+
+/* Logo */
+.logo-main-container {
+  height: auto;
+  width: 100%;
+}
+
+
+.logo-container {
+  height: auto;
+  width: 100%;
+/*   background: rgba(255, 192, 203, .9);
+ */}
+
+.logo-text {
+  height:100%;
+  width: 100%;
+}
+
+.logo-slogan {
+  height: auto;
+  font-size: 1.5rem;
+}
+
+
+/* Enter container */
+.enter-container {
+  height: auto;
+  width: 100%;
+  color: var(--main-color-gray);
+  fill: var(--main-color-gray);
+  transition: color 500ms linear, fill 500ms linear;
+}
+
+.enter-container:hover {
+  height: auto;
+  width: 100%;
+  fill: var(--main-color-hover);
+  color: var(--main-color-hover);
+}
+
+
+
+/* Plate icon */
+.svg-icon-plate-container {
+  height: auto;
+  width: auto;
+}
+
+.svg-icon-plate {
+  height: 101px;
+  width: 101px;
+  
+}
+
+.enter-text-container {
+}
+
+
+.enter-text {
+  font-size: 1.5em;
+}
+
