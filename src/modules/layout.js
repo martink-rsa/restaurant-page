@@ -1,5 +1,5 @@
 
-
+  let mainContainer = document.createElement('div');
 const layout = () => {
   console.log('layout loaded')
   /* Background */ 
@@ -10,7 +10,7 @@ const layout = () => {
   mainContainerBackground.classList.add('main-container-background');
 
   /* Main Container */
-  let mainContainer = document.createElement('div');
+
   mainContainer.classList.add('main-container');
   
   /* Push to `#Content` */

@@ -1,4 +1,4 @@
-import { mainContainer } from './modules/layout'
+import { mainContainer } from './layout'
 const intro = () => {
   console.log('intro');
   
