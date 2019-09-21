@@ -1,56 +1,36 @@
-import { mainContainer } from './layout'
+import { mainContainer } from './layout';
 const intro = () => {
   console.log('intro');
-  
-  /* Logo */
 
+  /* Logo */
   const logoMainContainer = document.createElement('div');
   logoMainContainer.classList.add('logo-main-container');
-
   const logoContainer = document.createElement('div');
   logoContainer.classList.add('logo-container');
-
-  /* Logo Main Text */
   const logoText = document.createElement('div');
   logoText.classList.add('logo-text');
-
   const svgLogo = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
   svgLogo.setAttributeNS('http://www.w3.org/2000/xmlns/', 'xmlns:xlink', 'http://www.w3.org/1999/xlink');
   svgLogo.setAttribute('viewBox', '0 0 452.51 106.06');
-  
   svgLogo.classList.add('svg-logo-text');
-
-
   const svgLogoText1 = document.createElementNS('http://www.w3.org/2000/svg', 'text');
   svgLogoText1.setAttribute('text-anchor', 'middle');
   svgLogoText1.setAttribute('x', '50%');
   svgLogoText1.setAttribute('y', '50%');
   svgLogoText1.setAttribute('alignment-baseline', 'middle');
   svgLogoText1.setAttribute('length-adjust', 'spacing');
-  // svgLogoText1.setAttribute('fill', 'var(--main-color-gray');
   svgLogoText1.textContent = `Francesco's Ristorante`;
-
-  
   svgLogo.appendChild(svgLogoText1);
   logoText.appendChild(svgLogo);
   logoContainer.appendChild(logoText);
 
   /* Logo Slogan */
-
-  let logoSlogan = document.createElement('div');
+  const logoSlogan = document.createElement('div');
   logoSlogan.classList.add('logo-slogan');
   logoSlogan.textContent = 'Coffee. Bistro. Bliss.';
-
   logoContainer.appendChild(logoSlogan);
-
   logoMainContainer.appendChild(logoContainer);
-
   mainContainer.appendChild(logoMainContainer);
-
-
-
-  /* ENTER link */
-  const enterLink = document.createElement('a');
 
   /* ENTER container */
   const enterContainer = document.createElement('div');
@@ -77,21 +57,16 @@ const intro = () => {
   /* 'ENTER' text below plate SVG icon */
   const enterTextContainer = document.createElement('div');
   enterTextContainer.classList.add('enter-text-container');
-  
+
   const enterText = document.createElement('div');
   enterText.classList.add('enter-text');
   enterText.textContent = 'ENTER';
 
   enterTextContainer.appendChild(enterText);
-
   enterContainer.appendChild(enterTextContainer);
-
   mainContainer.appendChild(enterContainer);
 
   /* Events */
-  enterContainer.addEventListener('click', function() {
-    console.log('Test');
-  });
-
-}
+  enterContainer.addEventListener('click', () => { console.log('Test'); });
+};
 export { intro }

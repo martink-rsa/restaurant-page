@@ -1,55 +1,46 @@
 
-  let mainContainer = document.createElement('div');
+const mainContainer = document.createElement('div');
+
 const layout = () => {
-  console.log('layout loaded')
-  /* Background */ 
-  let contentWrapper = document.getElementById('content');
+  console.log('layout loaded');
+  /* Background */
+  const contentWrapper = document.getElementById('content');
   contentWrapper.classList.add('content-wrapper');
 
-  let mainContainerBackground = document.createElement('div');
+  const mainContainerBackground = document.createElement('div');
   mainContainerBackground.classList.add('main-container-background');
 
   /* Main Container */
-
+  mainContainer.id = 'main-display';
   mainContainer.classList.add('main-container');
 
-
   /* Main Container Overlay 1 */
-  const mainContainerOverlay1 = document.createElement('div');
-  mainContainerOverlay1.classList.add('main-container-overlay-1');
+  const mainContainerCoverOverlay1 = document.createElement('div');
+  mainContainerCoverOverlay1.classList.add('main-container-cover-overlay-1');
 
   /* Main Container Overlay 2 */
-  const mainContainerOverlay2 = document.createElement('div');
-  mainContainerOverlay2.classList.add('main-container-overlay-2');
+  const mainContainerCoverOverlay2 = document.createElement('div');
+  mainContainerCoverOverlay2.classList.add('main-container-cover-overlay-2');
 
-  const imgMenuOverlay2_0 = document.createElement('div');
-  imgMenuOverlay2_0.classList.add('img-menu-overlay-2');
-  imgMenuOverlay2_0.classList.add('img-menu-bottom-corner');
-  mainContainerOverlay2.appendChild(imgMenuOverlay2_0);
+  const imgCoverOverlay2Top = document.createElement('div');
+  imgCoverOverlay2Top.classList.add('img-cover-overlay-2');
+  imgCoverOverlay2Top.classList.add('img-cover-bottom-corner');
+  mainContainerCoverOverlay2.appendChild(imgCoverOverlay2Top);
 
-  const imgMenuOverlay2_1 = document.createElement('div');
-  imgMenuOverlay2_1.classList.add('img-menu-overlay-2');
-  imgMenuOverlay2_1.classList.add('img-menu-top-corner');
-  mainContainerOverlay2.appendChild(imgMenuOverlay2_1);
+  const imgCoverOverlay2Bottom = document.createElement('div');
+  imgCoverOverlay2Bottom.classList.add('img-cover-overlay-2');
+  imgCoverOverlay2Bottom.classList.add('img-cover-top-corner');
+  mainContainerCoverOverlay2.appendChild(imgCoverOverlay2Bottom);
 
-  const imgMenuOverlayBeam = document.createElement('div');
-  imgMenuOverlayBeam.classList.add('img-menu-overlay-beam');
-  mainContainerOverlay2.appendChild(imgMenuOverlayBeam);
+  const imgCoverOverlay2Beam = document.createElement('div');
+  imgCoverOverlay2Beam.classList.add('img-cover-overlay-beam');
+  mainContainerCoverOverlay2.appendChild(imgCoverOverlay2Beam);
 
-
-  
-
-
-
-
-
-  
-  /* Push to `#Content` */
+  /* Push to `#content` */
   contentWrapper.appendChild(mainContainerBackground);
   contentWrapper.appendChild(mainContainer);
-  contentWrapper.appendChild(mainContainerOverlay1);
-  contentWrapper.appendChild(mainContainerOverlay2);
-  
+  contentWrapper.appendChild(mainContainerCoverOverlay1);
+  contentWrapper.appendChild(mainContainerCoverOverlay2);
 }
 
-export { mainContainer, layout }
+export { mainContainer, layout };

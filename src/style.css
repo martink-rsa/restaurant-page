@@ -84,7 +84,7 @@ h1 {
   border-radius: var(--main-container-border);
 } 
 
-.main-container-overlay-1 {
+.main-container-cover-overlay-1 {
   pointer-events: none;
   z-index: 2;
   position: absolute;
@@ -98,7 +98,7 @@ h1 {
   box-shadow: 0px 1px 3px 1px rgba(0,0,0,0.25);
 }
 
-.main-container-overlay-1::after {
+.main-container-cover-overlay-1::after {
   pointer-events: none;
   left: 0;
   content: "";
@@ -109,7 +109,7 @@ h1 {
   border-radius: var(--main-container-border);
 }
 
-.main-container-overlay-2 {
+.main-container-cover-overlay-2 {
   pointer-events: none;
   z-index: 3;
   position: absolute;
@@ -120,7 +120,7 @@ h1 {
 
 }
 
-.img-menu-overlay-2 {
+.img-cover-overlay-2 {
   pointer-events: none;
   height: 129px;
   width: 142px;
@@ -128,7 +128,7 @@ h1 {
   background-image: url('./Menu-corner-piece.png');
 }
 
-.img-menu-top-corner {
+.img-cover-top-corner {
   position: absolute;
   top: -5px;
   right: -12px;
@@ -136,7 +136,7 @@ h1 {
   filter: brightness(80%);
 }
 
-.img-menu-bottom-corner {
+.img-cover-bottom-corner {
   position: absolute;
   
   transform: scaleX(-1);
@@ -147,7 +147,7 @@ h1 {
   
 }
 
-.img-menu-overlay-beam {
+.img-cover-overlay-beam {
   position: absolute;
   left: 0;
   height: 800px;
