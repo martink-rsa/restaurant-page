@@ -90,6 +90,43 @@ const layout = (() => {
     pageOneTabsContainer.classList.add('page-one-tabs-container');
     pageOneUnderlay1.appendChild(pageOneTabsContainer);
 
+    const pageOneTabContainer1 = document.createElement('div');
+    pageOneTabContainer1.classList.add('page-one-tab-container');
+    pageOneTabContainer1.classList.add('page-one-tab-one');
+    const pageOneTabTextSpan1 = document.createElement('span');
+    pageOneTabTextSpan1.classList.add('page-one-tab-text');
+    pageOneTabTextSpan1.textContent = 'HOME';
+    pageOneTabContainer1.appendChild(pageOneTabTextSpan1);
+    pageOneTabsContainer.appendChild(pageOneTabContainer1);
+
+    const pageOneTabContainer2 = document.createElement('div');
+    pageOneTabContainer2.classList.add('page-one-tab-container');
+    pageOneTabContainer2.classList.add('page-one-tab-two');
+    const pageOneTabTextSpan2 = document.createElement('span');
+    pageOneTabTextSpan2.classList.add('page-one-tab-text');
+    pageOneTabTextSpan2.textContent = 'MENU';
+    pageOneTabContainer2.appendChild(pageOneTabTextSpan2);
+    pageOneTabsContainer.appendChild(pageOneTabContainer2);
+
+    const pageOneTabContainer3 = document.createElement('div');
+    pageOneTabContainer3.classList.add('page-one-tab-container');
+    pageOneTabContainer3.classList.add('page-one-tab-three');
+    const pageOneTabTextSpan3 = document.createElement('span');
+    pageOneTabTextSpan3.classList.add('page-one-tab-text');
+    pageOneTabTextSpan3.textContent = 'CONTACT';
+    pageOneTabContainer3.appendChild(pageOneTabTextSpan3);
+    pageOneTabsContainer.appendChild(pageOneTabContainer3);
+
+    const pageOneTabContainer4 = document.createElement('div');
+    pageOneTabContainer4.classList.add('page-one-tab-container');
+    pageOneTabContainer4.classList.add('page-one-tab-four');
+    const pageOneTabTextSpan4 = document.createElement('span');
+    pageOneTabTextSpan4.classList.add('page-one-tab-text');
+    pageOneTabTextSpan4.textContent = 'ABOUT';
+    pageOneTabContainer4.appendChild(pageOneTabTextSpan4);
+    pageOneTabsContainer.appendChild(pageOneTabContainer4);
+
+
     /* Main Container Content Display */
     mainContentDisplayContainer.id = 'main-content-display';
     mainContentDisplayContainer.classList.add('main-content-display-container');

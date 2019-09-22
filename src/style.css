@@ -255,12 +255,15 @@ h1 {
 /* ----- PAGE ONE STYLE ----- */
 
 .page-one-underlay-1 {
-  position: relative;
+  position: absolute;
+  left: 30px;
   z-index: 3;
+  
+  
   background: rgb(255, 252, 235);
   height: 750px;
-  width: 750px;
-  margin: auto;
+  width: 700px;
+  
   border-radius: 1px;
   -webkit-box-shadow: -1px 0px 5px -1px rgba(0,0,0,0.8);
   -moz-box-shadow: -1px 0px 5px -1px rgba(0,0,0,0.8);
@@ -322,8 +325,9 @@ h1 {
 .page-one-underlay-2 {
   position: absolute;
   z-index: 3;
-  height: 700px;
-  width: 700px;
+  left: 48px;
+  height: 715px;
+  width: 660px;
   margin: auto;
   border: 2px solid rgba(0,0,0,0.15);
   border-radius: 2px;
@@ -332,16 +336,79 @@ h1 {
 
 /*------ TABS ------- */
 .page-one-tabs-container {
-  
+  display: flex;
+  flex-direction: column;
   position: absolute;
   top: 0;
   right: -40px;
   z-index: 4;
-  height: 400px;
+  height: 600px;
   width: 50px;
   background: rgb(255, 252, 235);
-  border-radius: 0px 10px 60px 0px;
+  border-radius: 0 10px 60px 0;
 }
+
+.page-one-tab-container {
+  position: absolute;
+  background: darkslategrey;
+  height: 150px;
+  width: 50px; 
+}
+
+.page-one-tab-text {
+  font-family: 'Alegreya', serif;
+  -webkit-writing-mode: vertical-lr;
+  -ms-writing-mode: tb-lr;
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+  letter-spacing: -.2em;
+  font-size: 0.9rem;
+}
+
+.page-one-tab-one {
+  z-index: 59;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(129, 129, 129, 0.4);
+  border-radius: 0 10px 0 0;
+  border-radius: 0 0 60px 0;
+  border: 1px solid black;
+}
+
+.page-one-tab-two {
+  z-index: 58;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(129, 129, 129, 0.4);
+  border-radius: 0 0 60px 0;
+  top: 110px;
+  border: 1px solid black;
+}
+
+.page-one-tab-three {
+  z-index: 57;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(129, 129, 129, 0.4);
+  border-radius: 0 0 60px 0;
+  top: 300px;
+  border: 1px solid black;
+}
+.page-one-tab-four {
+  z-index: 56;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(129, 129, 129, 0.4);
+  top: 450px;
+  border-radius: 0 0 60px 0;
+  border: 1px solid black;
+}
+
+
 
 
 
@@ -406,6 +473,12 @@ h1 {
   .img-cover-overlay-2 {
     display: none;
   }
+
+
+  .page-one-tabs-container {
+    display: none;
+  }
+
 
 }
 
