@@ -57,6 +57,77 @@ const layout = (() => {
     contentWrapper.appendChild(mainContainer);
   };
 
+  const displayInactiveTabs = (parentContainer) => {
+    /* Main Container Tabs */
+    /* --- Underlay for non-active tabs */
+    const pageOneUnderlayTabs = document.createElement('div');
+    pageOneUnderlayTabs.classList.add('page-one-underlay-tabs');
+
+    const pageOneTabsContainer = document.createElement('div');
+    pageOneTabsContainer.classList.add('page-one-tabs-container');
+    pageOneUnderlayTabs.appendChild(pageOneTabsContainer);
+    /* --- END Underlay */
+
+    const pageOneTabContainer4 = document.createElement('div');
+    pageOneTabContainer4.classList.add('page-one-tab-container');
+    pageOneTabContainer4.classList.add('page-one-tab-four');
+    const pageOneTabTextSpan4 = document.createElement('span');
+    pageOneTabTextSpan4.classList.add('page-one-tab-text');
+    pageOneTabTextSpan4.textContent = 'ABOUT';
+    pageOneTabContainer4.appendChild(pageOneTabTextSpan4);
+    pageOneTabsContainer.appendChild(pageOneTabContainer4);
+
+    const pageOneTabContainer3 = document.createElement('div');
+    pageOneTabContainer3.classList.add('page-one-tab-container');
+    pageOneTabContainer3.classList.add('page-one-tab-three');
+    const pageOneTabTextSpan3 = document.createElement('span');
+    pageOneTabTextSpan3.classList.add('page-one-tab-text');
+    pageOneTabTextSpan3.textContent = 'CONTACT';
+    pageOneTabContainer3.appendChild(pageOneTabTextSpan3);
+    pageOneTabsContainer.appendChild(pageOneTabContainer3);
+
+    const pageOneTabContainer2 = document.createElement('div');
+    pageOneTabContainer2.classList.add('page-one-tab-container');
+    pageOneTabContainer2.classList.add('page-one-tab-two');
+    const pageOneTabTextSpan2 = document.createElement('span');
+    pageOneTabTextSpan2.classList.add('page-one-tab-text');
+    pageOneTabTextSpan2.textContent = 'MENU';
+    pageOneTabContainer2.appendChild(pageOneTabTextSpan2);
+    pageOneTabsContainer.appendChild(pageOneTabContainer2);
+
+    const pageOneTabContainer1 = document.createElement('div');
+    pageOneTabContainer1.classList.add('page-one-tab-container');
+    pageOneTabContainer1.classList.add('page-one-tab-one');
+    const pageOneTabTextSpan1 = document.createElement('span');
+    pageOneTabTextSpan1.classList.add('page-one-tab-text');
+    pageOneTabTextSpan1.textContent = 'HOME';
+    pageOneTabContainer1.appendChild(pageOneTabTextSpan1);
+    pageOneTabsContainer.appendChild(pageOneTabContainer1);
+
+    parentContainer.appendChild(pageOneUnderlayTabs);
+  };
+
+  const displayActiveTab = (parentContainer) => {
+    const pageOneActiveTabs = document.createElement('div');
+    pageOneActiveTabs.classList.add('page-one-active-tabs');
+
+    const pageOneTabsContainer = document.createElement('div');
+    pageOneTabsContainer.classList.add('page-one-active-tab-1-container');
+    pageOneActiveTabs.appendChild(pageOneTabsContainer);
+    /* --- END Underlay */
+
+    const pageOneTabContainer1 = document.createElement('div');
+    pageOneTabContainer1.classList.add('page-one-active-tab-container');
+    pageOneTabContainer1.classList.add('page-one-active-tab-one');
+    const pageOneTabTextSpan1 = document.createElement('span');
+    pageOneTabTextSpan1.classList.add('page-one-tab-text');
+    pageOneTabTextSpan1.textContent = 'HOME';
+    pageOneTabContainer1.appendChild(pageOneTabTextSpan1);
+    pageOneTabsContainer.appendChild(pageOneTabContainer1);
+
+    parentContainer.appendChild(pageOneActiveTabs);
+  };
+
   const displayPageOneStyle = () => {
     console.log('-- PAGE ONE STYLE --');
     /* Background */
@@ -75,57 +146,19 @@ const layout = (() => {
     mainContainerCoverBase.classList.add('main-container-cover-base');
     mainContainer.appendChild(mainContainerCoverBase);
 
+    displayInactiveTabs(mainContainer);
+
     /* Main Container Page One Underlay 1 */
     const pageOneUnderlay1 = document.createElement('div');
     pageOneUnderlay1.classList.add('page-one-underlay-1');
+
+    displayActiveTab(pageOneUnderlay1);
     mainContainer.appendChild(pageOneUnderlay1);
 
     /* Main Container Page One Underlay 1 */
     const pageOneUnderlay2 = document.createElement('div');
     pageOneUnderlay2.classList.add('page-one-underlay-2');
     mainContainer.appendChild(pageOneUnderlay2);
-
-    /* Main Container Tabs */
-    const pageOneTabsContainer = document.createElement('div');
-    pageOneTabsContainer.classList.add('page-one-tabs-container');
-    pageOneUnderlay1.appendChild(pageOneTabsContainer);
-
-    const pageOneTabContainer1 = document.createElement('div');
-    pageOneTabContainer1.classList.add('page-one-tab-container');
-    pageOneTabContainer1.classList.add('page-one-tab-one');
-    const pageOneTabTextSpan1 = document.createElement('span');
-    pageOneTabTextSpan1.classList.add('page-one-tab-text');
-    pageOneTabTextSpan1.textContent = 'HOME';
-    pageOneTabContainer1.appendChild(pageOneTabTextSpan1);
-    pageOneTabsContainer.appendChild(pageOneTabContainer1);
-
-    const pageOneTabContainer2 = document.createElement('div');
-    pageOneTabContainer2.classList.add('page-one-tab-container');
-    pageOneTabContainer2.classList.add('page-one-tab-two');
-    const pageOneTabTextSpan2 = document.createElement('span');
-    pageOneTabTextSpan2.classList.add('page-one-tab-text');
-    pageOneTabTextSpan2.textContent = 'MENU';
-    pageOneTabContainer2.appendChild(pageOneTabTextSpan2);
-    pageOneTabsContainer.appendChild(pageOneTabContainer2);
-
-    const pageOneTabContainer3 = document.createElement('div');
-    pageOneTabContainer3.classList.add('page-one-tab-container');
-    pageOneTabContainer3.classList.add('page-one-tab-three');
-    const pageOneTabTextSpan3 = document.createElement('span');
-    pageOneTabTextSpan3.classList.add('page-one-tab-text');
-    pageOneTabTextSpan3.textContent = 'CONTACT';
-    pageOneTabContainer3.appendChild(pageOneTabTextSpan3);
-    pageOneTabsContainer.appendChild(pageOneTabContainer3);
-
-    const pageOneTabContainer4 = document.createElement('div');
-    pageOneTabContainer4.classList.add('page-one-tab-container');
-    pageOneTabContainer4.classList.add('page-one-tab-four');
-    const pageOneTabTextSpan4 = document.createElement('span');
-    pageOneTabTextSpan4.classList.add('page-one-tab-text');
-    pageOneTabTextSpan4.textContent = 'ABOUT';
-    pageOneTabContainer4.appendChild(pageOneTabTextSpan4);
-    pageOneTabsContainer.appendChild(pageOneTabContainer4);
-
 
     /* Main Container Content Display */
     mainContentDisplayContainer.id = 'main-content-display';
