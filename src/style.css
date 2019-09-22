@@ -587,18 +587,71 @@ h1 {
 
 /* ----- HOME ----- */
 
+.home-top-container {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.home-feature-container {
+  display: flex;
+  height: auto;
+  width: 100%;
+}
+
 .home-logo-container {
-
-}
-
-.svg-home-logo {
-  /* background-image: url('logo-text-home.svg'); */
   height: 100px;
-  width: 200px;
+  width: 300px;
+}
+
+.img-home-logo {
+  left: calc(50% - 150px);
+  position: absolute;
+  height: auto;
+  width: 300px;
+  transition: left 1.5s ease-in-out, opacity 1s ease-in-out;
+  opacity: 1;
+
+}
+
+.animate-slide-left-in {
+  left: -50px;
+  opacity: 0;
+}
+
+/* BOX STYLE 1 */
+.box-style-1-container-100 {
+  border: 2px solid rgba(214, 214, 214, 0.9);
+  min-height: 100px;
+  width: 100%;
+}
+
+.box-style-1-container-50 {
+  border: 2px solid rgba(214, 214, 214, 0.9);
+  min-height: 100px;
+  width: 50%;
 }
 
 
 
+/* SEPARATOR STYLES */
+.box-separator-container {
+  height: 100%;
+  width: 80px;
+}
+
+.svg-box-separator-container {
+  height: 100%;
+  width: 100%;
+}
+
+.svg-box-separator-line {
+  stroke: rgba(0, 0, 0, 0.116);
+  stroke-width: 2px;
+  stroke-linecap: round;
+}
 
 /* --------------------------------- */
 /*         MEDIA QUERIES            */
