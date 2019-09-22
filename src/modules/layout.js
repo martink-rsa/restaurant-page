@@ -57,9 +57,10 @@ const layout = (() => {
     contentWrapper.appendChild(mainContainer);
   };
 
-  const displayInactiveTabs = (parentContainer) => {
+  const displayInactiveTabs = (parentContainer, activeTab) => {
     /* Main Container Tabs */
     /* --- Underlay for non-active tabs */
+    
     const pageOneUnderlayTabs = document.createElement('div');
     pageOneUnderlayTabs.classList.add('page-one-underlay-tabs');
 
@@ -67,66 +68,287 @@ const layout = (() => {
     pageOneTabsContainer.classList.add('page-one-tabs-container');
     pageOneUnderlayTabs.appendChild(pageOneTabsContainer);
     /* --- END Underlay */
+    if (activeTab === 1) {
+      const pageOneTabContainer4 = document.createElement('div');
+      pageOneTabContainer4.classList.add('page-one-tab-container');
+      pageOneTabContainer4.classList.add('page-one-tab-four');
+      const pageOneTabTextSpan4 = document.createElement('span');
+      pageOneTabTextSpan4.classList.add('page-one-tab-text');
+      pageOneTabTextSpan4.textContent = 'ABOUT';
+      pageOneTabContainer4.appendChild(pageOneTabTextSpan4);
+      pageOneTabsContainer.appendChild(pageOneTabContainer4);
 
-    const pageOneTabContainer4 = document.createElement('div');
-    pageOneTabContainer4.classList.add('page-one-tab-container');
-    pageOneTabContainer4.classList.add('page-one-tab-four');
-    const pageOneTabTextSpan4 = document.createElement('span');
-    pageOneTabTextSpan4.classList.add('page-one-tab-text');
-    pageOneTabTextSpan4.textContent = 'ABOUT';
-    pageOneTabContainer4.appendChild(pageOneTabTextSpan4);
-    pageOneTabsContainer.appendChild(pageOneTabContainer4);
+      const pageOneTabContainer3 = document.createElement('div');
+      pageOneTabContainer3.classList.add('page-one-tab-container');
+      pageOneTabContainer3.classList.add('page-one-tab-three');
+      const pageOneTabTextSpan3 = document.createElement('span');
+      pageOneTabTextSpan3.classList.add('page-one-tab-text');
+      pageOneTabTextSpan3.textContent = 'CONTACT';
+      pageOneTabContainer3.appendChild(pageOneTabTextSpan3);
+      pageOneTabsContainer.appendChild(pageOneTabContainer3);
 
-    const pageOneTabContainer3 = document.createElement('div');
-    pageOneTabContainer3.classList.add('page-one-tab-container');
-    pageOneTabContainer3.classList.add('page-one-tab-three');
-    const pageOneTabTextSpan3 = document.createElement('span');
-    pageOneTabTextSpan3.classList.add('page-one-tab-text');
-    pageOneTabTextSpan3.textContent = 'CONTACT';
-    pageOneTabContainer3.appendChild(pageOneTabTextSpan3);
-    pageOneTabsContainer.appendChild(pageOneTabContainer3);
+      const pageOneTabContainer2 = document.createElement('div');
+      pageOneTabContainer2.classList.add('page-one-tab-container');
+      pageOneTabContainer2.classList.add('page-one-tab-two');
+      const pageOneTabTextSpan2 = document.createElement('span');
+      pageOneTabTextSpan2.classList.add('page-one-tab-text');
+      pageOneTabTextSpan2.textContent = 'MENU';
+      pageOneTabContainer2.appendChild(pageOneTabTextSpan2);
+      pageOneTabsContainer.appendChild(pageOneTabContainer2);
 
-    const pageOneTabContainer2 = document.createElement('div');
-    pageOneTabContainer2.classList.add('page-one-tab-container');
-    pageOneTabContainer2.classList.add('page-one-tab-two');
-    const pageOneTabTextSpan2 = document.createElement('span');
-    pageOneTabTextSpan2.classList.add('page-one-tab-text');
-    pageOneTabTextSpan2.textContent = 'MENU';
-    pageOneTabContainer2.appendChild(pageOneTabTextSpan2);
-    pageOneTabsContainer.appendChild(pageOneTabContainer2);
+      const pageOneTabContainer1 = document.createElement('div');
+      pageOneTabContainer1.classList.add('page-one-tab-container');
+      pageOneTabContainer1.classList.add('page-one-tab-one');
+      const pageOneTabTextSpan1 = document.createElement('span');
+      pageOneTabTextSpan1.classList.add('page-one-tab-text');
+      pageOneTabTextSpan1.textContent = 'HOME';
+      pageOneTabContainer1.appendChild(pageOneTabTextSpan1);
+      pageOneTabsContainer.appendChild(pageOneTabContainer1);
+    } else if (activeTab === 2) {
+      const pageOneTabContainer4 = document.createElement('div');
+      pageOneTabContainer4.classList.add('page-one-tab-container');
+      pageOneTabContainer4.classList.add('page-one-tab-four');
+      const pageOneTabTextSpan4 = document.createElement('span');
+      pageOneTabTextSpan4.classList.add('page-one-tab-text');
+      pageOneTabTextSpan4.textContent = 'ABOUT';
+      pageOneTabContainer4.appendChild(pageOneTabTextSpan4);
+      pageOneTabsContainer.appendChild(pageOneTabContainer4);
 
-    const pageOneTabContainer1 = document.createElement('div');
-    pageOneTabContainer1.classList.add('page-one-tab-container');
-    pageOneTabContainer1.classList.add('page-one-tab-one');
-    const pageOneTabTextSpan1 = document.createElement('span');
-    pageOneTabTextSpan1.classList.add('page-one-tab-text');
-    pageOneTabTextSpan1.textContent = 'HOME';
-    pageOneTabContainer1.appendChild(pageOneTabTextSpan1);
-    pageOneTabsContainer.appendChild(pageOneTabContainer1);
+      const pageOneTabContainer3 = document.createElement('div');
+      pageOneTabContainer3.classList.add('page-one-tab-container');
+      pageOneTabContainer3.classList.add('page-one-tab-three');
+      const pageOneTabTextSpan3 = document.createElement('span');
+      pageOneTabTextSpan3.classList.add('page-one-tab-text');
+      pageOneTabTextSpan3.textContent = 'CONTACT';
+      pageOneTabContainer3.appendChild(pageOneTabTextSpan3);
+      pageOneTabsContainer.appendChild(pageOneTabContainer3);
+
+      const pageOneTabContainer2 = document.createElement('div');
+      pageOneTabContainer2.classList.add('page-one-tab-container');
+      pageOneTabContainer2.classList.add('page-one-tab-two');
+      const pageOneTabTextSpan2 = document.createElement('span');
+      pageOneTabTextSpan2.classList.add('page-one-tab-text');
+      pageOneTabTextSpan2.textContent = 'MENU';
+      pageOneTabContainer2.appendChild(pageOneTabTextSpan2);
+      pageOneTabsContainer.appendChild(pageOneTabContainer2);
+
+     } else if (activeTab === 3) {
+      const pageOneTabContainer4 = document.createElement('div');
+      pageOneTabContainer4.classList.add('page-one-tab-container');
+      pageOneTabContainer4.classList.add('page-one-tab-four');
+      const pageOneTabTextSpan4 = document.createElement('span');
+      pageOneTabTextSpan4.classList.add('page-one-tab-text');
+      pageOneTabTextSpan4.textContent = 'ABOUT';
+      pageOneTabContainer4.appendChild(pageOneTabTextSpan4);
+      pageOneTabsContainer.appendChild(pageOneTabContainer4);
+
+      const pageOneTabContainer3 = document.createElement('div');
+      pageOneTabContainer3.classList.add('page-one-tab-container');
+      pageOneTabContainer3.classList.add('page-one-tab-three');
+      const pageOneTabTextSpan3 = document.createElement('span');
+      pageOneTabTextSpan3.classList.add('page-one-tab-text');
+      pageOneTabTextSpan3.textContent = 'CONTACT';
+      pageOneTabContainer3.appendChild(pageOneTabTextSpan3);
+      pageOneTabsContainer.appendChild(pageOneTabContainer3);
+
+    } else if (activeTab === 4) {
+      const pageOneTabContainer4 = document.createElement('div');
+      pageOneTabContainer4.classList.add('page-one-tab-container');
+      pageOneTabContainer4.classList.add('page-one-tab-four');
+      const pageOneTabTextSpan4 = document.createElement('span');
+      pageOneTabTextSpan4.classList.add('page-one-tab-text');
+      pageOneTabTextSpan4.textContent = 'ABOUT';
+      pageOneTabContainer4.appendChild(pageOneTabTextSpan4);
+      pageOneTabsContainer.appendChild(pageOneTabContainer4);
+
+      const pageOneTabContainer3 = document.createElement('div');
+      pageOneTabContainer3.classList.add('page-one-tab-container');
+      pageOneTabContainer3.classList.add('page-one-tab-three');
+      const pageOneTabTextSpan3 = document.createElement('span');
+      pageOneTabTextSpan3.classList.add('page-one-tab-text');
+      pageOneTabTextSpan3.textContent = 'CONTACT';
+      pageOneTabContainer3.appendChild(pageOneTabTextSpan3);
+      pageOneTabsContainer.appendChild(pageOneTabContainer3);
+
+      const pageOneTabContainer2 = document.createElement('div');
+      pageOneTabContainer2.classList.add('page-one-tab-container');
+      pageOneTabContainer2.classList.add('page-one-tab-two');
+      const pageOneTabTextSpan2 = document.createElement('span');
+      pageOneTabTextSpan2.classList.add('page-one-tab-text');
+      pageOneTabTextSpan2.textContent = 'MENU';
+      pageOneTabContainer2.appendChild(pageOneTabTextSpan2);
+      pageOneTabsContainer.appendChild(pageOneTabContainer2);
+
+      const pageOneTabContainer1 = document.createElement('div');
+      pageOneTabContainer1.classList.add('page-one-tab-container');
+      pageOneTabContainer1.classList.add('page-one-tab-one');
+      const pageOneTabTextSpan1 = document.createElement('span');
+      pageOneTabTextSpan1.classList.add('page-one-tab-text');
+      pageOneTabTextSpan1.textContent = 'HOME';
+      pageOneTabContainer1.appendChild(pageOneTabTextSpan1);
+      pageOneTabsContainer.appendChild(pageOneTabContainer1);
+    }
 
     parentContainer.appendChild(pageOneUnderlayTabs);
   };
 
-  const displayActiveTab = (parentContainer) => {
+  const displayActiveTab = (parentContainer, activeTab) => {
     const pageOneActiveTabs = document.createElement('div');
     pageOneActiveTabs.classList.add('page-one-active-tabs');
 
-    const pageOneTabsContainer = document.createElement('div');
-    pageOneTabsContainer.classList.add('page-one-active-tab-1-container');
-    pageOneActiveTabs.appendChild(pageOneTabsContainer);
-    /* --- END Underlay */
+    if (activeTab === 1) {
+      const pageOneTabsContainer = document.createElement('div');
+      pageOneTabsContainer.classList.add('page-one-active-tab-1-container');
+      pageOneActiveTabs.appendChild(pageOneTabsContainer);
+      /* --- END Underlay */
+      
+      const pageOneTabContainer1 = document.createElement('div');
+      pageOneTabContainer1.classList.add('page-one-active-tab-container');
+      pageOneTabContainer1.classList.add('page-one-active-tab-one');
+      const pageOneTabTextSpan1 = document.createElement('span');
+      pageOneTabTextSpan1.classList.add('page-one-tab-text');
+      pageOneTabTextSpan1.textContent = 'HOME';
+      pageOneTabContainer1.appendChild(pageOneTabTextSpan1);
+      pageOneTabsContainer.appendChild(pageOneTabContainer1);
+    } else if (activeTab === 2) {
+      const pageOneTabsContainer = document.createElement('div');
+      pageOneTabsContainer.classList.add('page-one-active-tab-2-container');
+      pageOneActiveTabs.appendChild(pageOneTabsContainer);
+      /* --- END Underlay */
+      
+      const pageOneTabContainer2 = document.createElement('div');
+      pageOneTabContainer2.classList.add('page-one-active-tab-container');
+      pageOneTabContainer2.classList.add('page-one-active-tab-two');
+      const pageOneTabTextSpan2 = document.createElement('span');
+      pageOneTabTextSpan2.classList.add('page-one-tab-text');
+      pageOneTabTextSpan2.textContent = 'MENU';
+      pageOneTabContainer2.appendChild(pageOneTabTextSpan2);
+      pageOneTabsContainer.appendChild(pageOneTabContainer2);
 
-    const pageOneTabContainer1 = document.createElement('div');
-    pageOneTabContainer1.classList.add('page-one-active-tab-container');
-    pageOneTabContainer1.classList.add('page-one-active-tab-one');
-    const pageOneTabTextSpan1 = document.createElement('span');
-    pageOneTabTextSpan1.classList.add('page-one-tab-text');
-    pageOneTabTextSpan1.textContent = 'HOME';
-    pageOneTabContainer1.appendChild(pageOneTabTextSpan1);
-    pageOneTabsContainer.appendChild(pageOneTabContainer1);
+      const pageOneTabContainer1 = document.createElement('div');
+      pageOneTabContainer1.classList.add('page-one-active-tab-container');
+      pageOneTabContainer1.classList.add('page-one-active-tab-one-flat');
+      const pageOneTabTextSpan1 = document.createElement('span');
+      pageOneTabTextSpan1.classList.add('page-one-tab-text');
+      pageOneTabTextSpan1.textContent = 'HOME';
+      pageOneTabContainer1.appendChild(pageOneTabTextSpan1);
+      pageOneTabsContainer.appendChild(pageOneTabContainer1);
+    } else if (activeTab === 3) {
+      console.log('ACTIVE!');
+      const pageOneTabsContainer = document.createElement('div');
+      pageOneTabsContainer.classList.add('page-one-active-tab-3-container');
+      pageOneActiveTabs.appendChild(pageOneTabsContainer);
+      /* --- END Underlay */
+
+      const pageOneTabContainer3 = document.createElement('div');
+      pageOneTabContainer3.classList.add('page-one-active-tab-container');
+      pageOneTabContainer3.classList.add('page-one-active-tab-three');
+      const pageOneTabTextSpan3 = document.createElement('span');
+      pageOneTabTextSpan3.classList.add('page-one-tab-text');
+      pageOneTabTextSpan3.textContent = 'CONTACT';
+      pageOneTabContainer3.appendChild(pageOneTabTextSpan3);
+      pageOneTabsContainer.appendChild(pageOneTabContainer3);
+      
+      const pageOneTabContainer2 = document.createElement('div');
+
+      pageOneTabContainer2.classList.add('page-one-active-tab-container');
+      pageOneTabContainer2.classList.add('page-one-active-tab-two-flat');
+      pageOneTabContainer2.classList.add('no-border-radius');
+
+      const pageOneTabTextSpan2 = document.createElement('span');
+      pageOneTabTextSpan2.classList.add('page-one-tab-text');
+      pageOneTabTextSpan2.textContent = 'MENU';
+      pageOneTabContainer2.appendChild(pageOneTabTextSpan2);
+      pageOneTabsContainer.appendChild(pageOneTabContainer2);
+
+      const pageOneTabContainer1 = document.createElement('div');
+      pageOneTabContainer1.classList.add('page-one-active-tab-container');
+      pageOneTabContainer1.classList.add('page-one-active-tab-one-flat');
+      
+      const pageOneTabTextSpan1 = document.createElement('span');
+      pageOneTabTextSpan1.classList.add('page-one-tab-text');
+      pageOneTabTextSpan1.textContent = 'HOME';
+      pageOneTabContainer1.appendChild(pageOneTabTextSpan1);
+      pageOneTabsContainer.appendChild(pageOneTabContainer1);
+    } else if (activeTab === 4) {
+      const pageOneTabsContainer = document.createElement('div');
+      pageOneTabsContainer.classList.add('page-one-active-tab-4-container');
+      pageOneActiveTabs.appendChild(pageOneTabsContainer);
+      /* --- END Underlay */
+
+      const pageOneTabContainer4 = document.createElement('div');
+      pageOneTabContainer4.classList.add('page-one-active-tab-container');
+      pageOneTabContainer4.classList.add('page-one-active-tab-four');
+      const pageOneTabTextSpan4 = document.createElement('span');
+      pageOneTabTextSpan4.classList.add('page-one-tab-text');
+      pageOneTabTextSpan4.textContent = 'ABOUT';
+      pageOneTabContainer4.appendChild(pageOneTabTextSpan4);
+      pageOneTabsContainer.appendChild(pageOneTabContainer4);
+
+      const pageOneTabContainer3 = document.createElement('div');
+      pageOneTabContainer3.classList.add('page-one-active-tab-container');
+      pageOneTabContainer3.classList.add('page-one-active-tab-three-flat');
+      const pageOneTabTextSpan3 = document.createElement('span');
+      pageOneTabTextSpan3.classList.add('page-one-tab-text');
+      pageOneTabTextSpan3.textContent = 'CONTACT';
+      pageOneTabContainer3.appendChild(pageOneTabTextSpan3);
+      pageOneTabsContainer.appendChild(pageOneTabContainer3);
+      
+      const pageOneTabContainer2 = document.createElement('div');
+      pageOneTabContainer2.classList.add('page-one-active-tab-container');
+      pageOneTabContainer2.classList.add('page-one-active-tab-two-flat');
+      const pageOneTabTextSpan2 = document.createElement('span');
+      pageOneTabTextSpan2.classList.add('page-one-tab-text');
+      pageOneTabTextSpan2.textContent = 'MENU';
+      pageOneTabContainer2.appendChild(pageOneTabTextSpan2);
+      pageOneTabsContainer.appendChild(pageOneTabContainer2);
+
+      const pageOneTabContainer1 = document.createElement('div');
+      pageOneTabContainer1.classList.add('page-one-active-tab-container');
+      pageOneTabContainer1.classList.add('page-one-active-tab-one-flat');
+      const pageOneTabTextSpan1 = document.createElement('span');
+      pageOneTabTextSpan1.classList.add('page-one-tab-text');
+      pageOneTabTextSpan1.textContent = 'HOME';
+      pageOneTabContainer1.appendChild(pageOneTabTextSpan1);
+      pageOneTabsContainer.appendChild(pageOneTabContainer1);
+    } 
 
     parentContainer.appendChild(pageOneActiveTabs);
   };
+
+  const displayButtonsToPage = () => {
+    // BUTTONS
+    const pageOneTabsBtnsOverlay = document.createElement('div');
+    pageOneTabsBtnsOverlay.classList.add('page-one-tabs-btns-overlay');
+
+    const pageOneTabsBtnsContainer = document.createElement('div');
+    pageOneTabsBtnsContainer.classList.add('page-one-tabs-btns-container');
+
+    const pageOneTabsBtn1 = document.createElement('div');
+    pageOneTabsBtn1.id = 'tab-btn-1';
+    pageOneTabsBtn1.classList.add('page-one-tabs-btn');
+    pageOneTabsBtnsContainer.appendChild(pageOneTabsBtn1);
+
+    const pageOneTabsBtn2 = document.createElement('div');
+    pageOneTabsBtn2.id = 'tab-btn-2';
+    pageOneTabsBtn2.classList.add('page-one-tabs-btn');
+    pageOneTabsBtnsContainer.appendChild(pageOneTabsBtn2);
+
+    const pageOneTabsBtn3 = document.createElement('div');
+    pageOneTabsBtn3.id = 'tab-btn-3';
+    pageOneTabsBtn3.classList.add('page-one-tabs-btn');
+    pageOneTabsBtnsContainer.appendChild(pageOneTabsBtn3);
+
+    const pageOneTabsBtn4 = document.createElement('div');
+    pageOneTabsBtn4.id = 'tab-btn-4';
+    pageOneTabsBtn4.classList.add('page-one-tabs-btn');
+    pageOneTabsBtnsContainer.appendChild(pageOneTabsBtn4);
+
+    pageOneTabsBtnsOverlay.appendChild(pageOneTabsBtnsContainer);
+
+    mainContainer.appendChild(pageOneTabsBtnsOverlay);
+    // -- END BUTTONS
+  }
 
   const displayPageOneStyle = () => {
     console.log('-- PAGE ONE STYLE --');
@@ -146,13 +368,17 @@ const layout = (() => {
     mainContainerCoverBase.classList.add('main-container-cover-base');
     mainContainer.appendChild(mainContainerCoverBase);
 
-    displayInactiveTabs(mainContainer);
+
+    // displayInactiveTabs(mainContainer, tabIndex);
 
     /* Main Container Page One Underlay 1 */
     const pageOneUnderlay1 = document.createElement('div');
+    pageOneUnderlay1.id = 'tabs-bottom';
     pageOneUnderlay1.classList.add('page-one-underlay-1');
 
-    displayActiveTab(pageOneUnderlay1);
+    // displayActiveTab(pageOneUnderlay1, tabIndex);
+
+
     mainContainer.appendChild(pageOneUnderlay1);
 
     /* Main Container Page One Underlay 1 */
@@ -180,16 +406,40 @@ const layout = (() => {
     contentWrapper.appendChild(mainContainer);
   };
 
-  const displayToPage = (style) => {
+  const clearTabDisplay = () => {
+    const bottomTabs = document.getElementById('tabs-bottom');
+    const underlayTabs = document.getElementsByClassName('page-one-underlay-tabs');
+    const tabsContainer = document.getElementsByClassName('page-one-tabs-container');
+    bottomTabs.textContent = '';
+
+
+    for (let i = 0; i < underlayTabs.length; i += 1) {
+      console.log(underlayTabs[i]);
+      underlayTabs[i].remove();
+    }
+    //underlayTabs[0].remove();
+    console.log(underlayTabs);
+  };
+
+  const displayTabsToPage = (tabIndex) => {
+    clearTabDisplay();
+    const pageOneUnderlay1 = document.getElementById('tabs-bottom');
+    displayInactiveTabs(mainContainer, tabIndex);
+    displayActiveTab(pageOneUnderlay1, tabIndex);
+  };
+
+  const displayToPage = (style, tabIndex) => {
     if (style === 'cover') {
       displayCoverStyle();
     } else if (style === 'page1') {
       displayPageOneStyle();
+      displayButtonsToPage();
     }
   };
 
   return {
     displayToPage,
+    displayTabsToPage,
   };
 })();
 

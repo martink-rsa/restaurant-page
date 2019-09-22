@@ -1,5 +1,10 @@
-const about = () => {
-  console.log("about");
-}
+const about = (() => {
+  const displayToPage = () => {
+    console.log('about: displayToPage()');
 
+  }
+  return {
+    displayToPage,
+  };
+})();
 export { about }

@@ -1,5 +1,10 @@
-const contact = () => {
-  console.log("contact");
-}
+const contact = (() => {
+  const displayToPage = () => {
+    console.log('contact: displayToPage()');
 
+  }
+  return {
+    displayToPage,
+  };
+})();
 export { contact }

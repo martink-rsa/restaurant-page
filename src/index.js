@@ -41,12 +41,6 @@ Simply follow the instructions on this gist. EZPZ! */
 // Clear page
 // Call module function to load page
 
-const ModuleControl = (() => {
-
-  return {
-
-  };
-})();
 
 const RestaurantMain = (() => {
   const clearLayout = () => {
@@ -59,13 +53,55 @@ const RestaurantMain = (() => {
     document.getElementById('main-content-display').textContent = '';
   };
 
-  const navigationTrigger = () => {
-    // Pass control and [index]? to ModuleControl to
-    //      call correct module
+  const showModule = (newModule) => {
+    if (newModule === 'home') {
+      clearContent();
+      console.log('showModule(): home');
+      home.displayToPage();
+      layout.displayTabsToPage(1);
+      
+    } else if (newModule === 'menu') {
+      clearContent();
+      menu.displayToPage();
+      layout.displayTabsToPage(2);
+    } else if (newModule === 'contact') {
+      clearContent();
+      contact.displayToPage();
+      layout.displayTabsToPage(3);
+    } else if (newModule === 'about') {
+      clearContent();
+      about.displayToPage();
+      layout.displayTabsToPage(4);
+    }
   };
 
-  const setEvents = () => {
+  const setEvents = (currentLayout) => {
     console.log('CALL: setEvents()');
+    if (currentLayout === 'page1') {
+      const tabBtn1 = document.getElementById('tab-btn-1');
+      const tabBtn2 = document.getElementById('tab-btn-2');
+      const tabBtn3 = document.getElementById('tab-btn-3');
+      const tabBtn4 = document.getElementById('tab-btn-4');
+
+      tabBtn1.addEventListener('click', () => {
+        showModule('home');
+      });
+      tabBtn2.addEventListener('click', () => {
+        showModule('menu');
+        console.log('menu click');
+      });
+      tabBtn3.addEventListener('click', () => {
+        showModule('contact');
+        console.log('contact click');
+
+      });
+      tabBtn4.addEventListener('click', () => {
+        console.log('about click');
+        showModule('about');
+      });
+    }
+    // REMOVE EVENTS:
+    // document.getElementById("myDIV").removeEventListener("mousemove", myFunction);
   };
 
   const showLayout = (newLayout) => {
@@ -73,7 +109,8 @@ const RestaurantMain = (() => {
       layout.displayToPage('cover');
 
     } else if (newLayout === 'page1') {
-      layout.displayToPage('page1');
+      layout.displayToPage('page1', 1);
+      showModule('home');
     }
   };
 
@@ -85,9 +122,10 @@ const RestaurantMain = (() => {
   };
 
   const init = () => {
-    setEvents();
-    layout.displayToPage('page1');
-    // intro.displayToPage();
+    showLayout('page1');
+    showModule('home');
+    setEvents('page1');
+
   };
 
   return {
