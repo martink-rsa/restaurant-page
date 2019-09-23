@@ -123,7 +123,7 @@ const RestaurantMain = (() => {
 
   const init = () => {
     showLayout('page1');
-    showModule('home');
+    showModule('menu');
     setEvents('page1');
 
   };

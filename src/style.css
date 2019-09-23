@@ -3,6 +3,7 @@
   --main-color-hover: rgb(107, 107, 107);
   --main-container-border: 8px 15px 15px 8px;
   --page-one-base-color: rgb(255, 252, 235);
+  --content-spacing-size: 20px;
   ;
 }
 
@@ -16,7 +17,7 @@ html, body {
 body {
   background: rgb(153, 153, 153);
   color: rgb(53, 53, 53);
-  font-family: 'Alegreya', serif;
+  font-family: 'Source Sans Pro', sans-serif;
   text-align: center;
 }
 
@@ -24,6 +25,10 @@ h1 {
   font-family: 'Mrs Saint Delafield', cursive;
   font-size: 4em;
   margin: 0;
+}
+
+h4 {
+  font-family: 'Alegreya', serif;
 }
 
 .drop-shadow-text {
@@ -379,7 +384,6 @@ h1 {
   right: -50px;
   height: 680px;
   width: 50px;
-  background: red;
 }
 
 .page-one-tabs-btn {
@@ -601,6 +605,45 @@ h1 {
   width: 100%;
 }
 
+.img-home-chef {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.home-feature-chef-title-container {
+}
+
+.img-style-1-container {
+  position: relative;
+  height: 200px;
+  width: 300px;
+  background: rebeccapurple;
+  border-radius: 5px;
+  filter: sepia(100%);
+}
+
+.img-style-1-overlay-1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+  background: rgb(0,0,0);
+  background: -moz-radial-gradient(circle, rgba(0,0,0,0) 0%, rgba(70,70,70,1) 100%);
+  background: -webkit-radial-gradient(circle, rgba(0,0,0,0) 0%, rgba(70,70,70,1) 100%);
+  background: radial-gradient(circle, rgba(0,0,0,0) 0%, rgba(70,70,70,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#464646",GradientType=1);
+}
+
+.home-info-container {
+  display: flex;
+  height: auto;
+  width: 100%;
+}
+
 .home-logo-container {
   height: 100px;
   width: 300px;
@@ -621,11 +664,55 @@ h1 {
   opacity: 0;
 }
 
+/* CONTACT */
+
+.contact-top-container {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+}
+
+.contact-form-container {
+  height: 500px;
+  width: 100%;
+}
+
+.contact-form {
+  
+}
+
+.contact-form-input-text {
+  height: 450px;
+  width: 100%;
+  resize: none;
+}
+
+.btn-style-1 {
+  height: 40px;
+  width: 150px;
+}
+
 /* BOX STYLE 1 */
 .box-style-1-container-100 {
-  border: 2px solid rgba(214, 214, 214, 0.9);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* border: 2px solid rgba(214, 214, 214, 0.9); */
   min-height: 100px;
   width: 100%;
+  padding: 10px;
+}
+
+.box-style-1-container-100 > p {
+  align-self: flex-start;
+  margin: 0;
+}
+
+.box-style-1-container-100 > h4 {
+  color: aquamarine;
 }
 
 .box-style-1-container-50 {
@@ -637,9 +724,12 @@ h1 {
 
 
 /* SEPARATOR STYLES */
+
+/* --- BOX */
 .box-separator-container {
   height: 100%;
-  width: 80px;
+  width: var(--content-spacing-size);
+  flex-shrink: 0;
 }
 
 .svg-box-separator-container {
@@ -651,6 +741,12 @@ h1 {
   stroke: rgba(0, 0, 0, 0.116);
   stroke-width: 2px;
   stroke-linecap: round;
+}
+
+/* --- SECTION */
+.section-separator-container {
+  height: var(--content-spacing-size);
+  width: 100%;
 }
 
 /* --------------------------------- */

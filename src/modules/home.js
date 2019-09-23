@@ -1,4 +1,5 @@
 import Logo from './menu-logo-flatten.png';
+import Chef from './chef-1.jpeg';
 
 const home = (() => {
   const createBox = (style, size) => {
@@ -33,8 +34,8 @@ const home = (() => {
       
       svgSeparator.appendChild(svgSeparatorLine);
       separatorContainer.appendChild(svgSeparator);
-      
-
+    } else if (type === 'section') {
+      separatorContainer.classList.add('section-separator-container');
     }
     return separatorContainer;
   };
@@ -43,7 +44,7 @@ const home = (() => {
     console.log('home: displayToPage()');
 
     const mainDisplay = document.getElementById('main-content-display');
-    mainDisplay.textContent = '';
+    // mainDisplay.textContent = '';
 
     const homeTopContainer = document.createElement('div');
     homeTopContainer.classList.add('home-top-container');
@@ -64,13 +65,62 @@ const home = (() => {
 
     const homeFeatureContainer = document.createElement('div');
     homeFeatureContainer.classList.add('home-feature-container');
-    homeFeatureContainer.appendChild(createBox(1, 100));
-    homeFeatureContainer.appendChild(createSeparator('box'));
-    homeFeatureContainer.appendChild(createBox(1, 100));
+
+    /* FEATURE */
+    const homeChefFeatureBox = createBox(1, 100);
+
+    const imgStyle1Container1 = document.createElement('div');
+    imgStyle1Container1.classList.add('img-style-1-container');
+
+    const imgHomeChef = new Image();
+    imgHomeChef.src = Chef;
+    imgHomeChef.classList.add('img-home-chef');
+    imgStyle1Container1.appendChild(imgHomeChef);
+    
+    const imgStyle1Overlay1 = document.createElement('div');
+    imgStyle1Overlay1.classList.add('img-style-1-overlay-1');
+    imgStyle1Container1.appendChild(imgStyle1Overlay1);
+    homeChefFeatureBox.appendChild(imgStyle1Container1);
+    homeFeatureContainer.appendChild(homeChefFeatureBox);
+
+    const homeFeatureChefTitleContainer = document.createElement('div');
+    homeFeatureChefTitleContainer.classList.add('home-feature-chef-title-container');
+    
+    
+    const homeFeatureChefTitleH4 = document.createElement('h4');
+    homeFeatureChefTitleH4.textContent = 'CHEF FRANCESCO MILANESI';
+    homeFeatureChefTitleContainer.appendChild(homeFeatureChefTitleH4);
+
+    const homeFeatureChefTitleText = document.createElement('p');
+    homeFeatureChefTitleText.textContent = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.';
+    homeFeatureChefTitleContainer.appendChild(homeFeatureChefTitleText);
+
+    homeChefFeatureBox.appendChild(homeFeatureChefTitleContainer);
+
     mainDisplay.appendChild(homeFeatureContainer);
+    
+    mainDisplay.appendChild(createSeparator('section'));
+
+    /* INFO */
+    const homeInfoContainer = document.createElement('div');
+    homeInfoContainer.classList.add('home-info-container');
+
+    const homeInfoLeft = createBox(1, 100);
+    const homeInfoLeftText = document.createElement('p');
+    homeInfoLeftText.textContent = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.';
+    homeInfoLeft.appendChild(homeInfoLeftText);
+    homeInfoContainer.appendChild(homeInfoLeft);
+
+    homeInfoContainer.appendChild(createSeparator('box'));
+
+    const homeInfoRight = createBox(1, 100);
+    const homeInfoRightText = document.createElement('p');
+    homeInfoRightText.textContent = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.';
+    homeInfoRight.appendChild(homeInfoRightText);
+    homeInfoContainer.appendChild(homeInfoRight);
+
+    mainDisplay.appendChild(homeInfoContainer);
   };
-
-
 
   return {
     displayToPage,
