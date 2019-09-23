@@ -18,7 +18,6 @@ const contact = (() => {
 
       const svgSeparator = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
       svgSeparator.setAttributeNS('http://www.w3.org/2000/xmlns/', 'xmlns:xlink', 'http://www.w3.org/1999/xlink');
-      
       svgSeparator.classList.add('svg-box-separator-container');
 
       const svgSeparatorLine = document.createElementNS('http://www.w3.org/2000/svg', 'line');
@@ -27,7 +26,7 @@ const contact = (() => {
       svgSeparatorLine.setAttribute('y1', '10%');
       svgSeparatorLine.setAttribute('x2', '50%');
       svgSeparatorLine.setAttribute('y2', '90%');
-      
+
       svgSeparator.appendChild(svgSeparatorLine);
       separatorContainer.appendChild(svgSeparator);
     } else if (type === 'section') {
@@ -35,6 +34,7 @@ const contact = (() => {
     }
     return separatorContainer;
   };
+
   const displayToPage = () => {
     const mainDisplay = document.getElementById('main-content-display');
 

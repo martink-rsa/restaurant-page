@@ -21,8 +21,6 @@ const home = (() => {
 
       const svgSeparator = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
       svgSeparator.setAttributeNS('http://www.w3.org/2000/xmlns/', 'xmlns:xlink', 'http://www.w3.org/1999/xlink');
-      // svgSeparator.setAttribute('viewbox', '0 0 90 90');
-      
       svgSeparator.classList.add('svg-box-separator-container');
 
       const svgSeparatorLine = document.createElementNS('http://www.w3.org/2000/svg', 'line');
@@ -31,7 +29,7 @@ const home = (() => {
       svgSeparatorLine.setAttribute('y1', '10%');
       svgSeparatorLine.setAttribute('x2', '50%');
       svgSeparatorLine.setAttribute('y2', '90%');
-      
+
       svgSeparator.appendChild(svgSeparatorLine);
       separatorContainer.appendChild(svgSeparator);
     } else if (type === 'section') {
@@ -41,9 +39,7 @@ const home = (() => {
   };
 
   const displayToPage = () => {
-
     const mainDisplay = document.getElementById('main-content-display');
-    // mainDisplay.textContent = '';
 
     const homeTopContainer = document.createElement('div');
     homeTopContainer.classList.add('home-top-container');
@@ -75,7 +71,7 @@ const home = (() => {
     imgHomeChef.src = Chef;
     imgHomeChef.classList.add('img-home-chef');
     imgStyle1Container1.appendChild(imgHomeChef);
-    
+
     const imgStyle1Overlay1 = document.createElement('div');
     imgStyle1Overlay1.classList.add('img-style-1-overlay-1');
     imgStyle1Container1.appendChild(imgStyle1Overlay1);
@@ -84,8 +80,7 @@ const home = (() => {
 
     const homeFeatureChefTitleContainer = document.createElement('div');
     homeFeatureChefTitleContainer.classList.add('home-feature-chef-title-container');
-    
-    
+
     const homeFeatureChefTitleH4 = document.createElement('h4');
     homeFeatureChefTitleH4.textContent = 'CHEF FRANCESCO MILANESI';
     homeFeatureChefTitleContainer.appendChild(homeFeatureChefTitleH4);
@@ -97,7 +92,7 @@ const home = (() => {
     homeChefFeatureBox.appendChild(homeFeatureChefTitleContainer);
 
     mainDisplay.appendChild(homeFeatureContainer);
-    
+
     mainDisplay.appendChild(createSeparator('section'));
 
     /* INFO */
@@ -125,4 +120,4 @@ const home = (() => {
     displayToPage,
   };
 })();
-export { home }
+export { home };

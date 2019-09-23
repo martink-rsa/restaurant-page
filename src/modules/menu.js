@@ -1,5 +1,3 @@
-import { timingSafeEqual } from "crypto";
-
 const menu = (() => {
   const createBox = (style, size) => {
     const boxContainer = document.createElement('div');
@@ -13,37 +11,13 @@ const menu = (() => {
     return boxContainer;
   };
 
-  const createSeparator = (type) => {
-    const separatorContainer = document.createElement('div');
-    if (type === 'box') {
-      separatorContainer.classList.add('box-separator-container');
-
-      const svgSeparator = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-      svgSeparator.setAttributeNS('http://www.w3.org/2000/xmlns/', 'xmlns:xlink', 'http://www.w3.org/1999/xlink');
-      // svgSeparator.setAttribute('viewbox', '0 0 90 90');
-      
-      svgSeparator.classList.add('svg-box-separator-container');
-
-      const svgSeparatorLine = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-      svgSeparatorLine.classList.add('svg-box-separator-line');
-      svgSeparatorLine.setAttribute('x1', '50%');
-      svgSeparatorLine.setAttribute('y1', '10%');
-      svgSeparatorLine.setAttribute('x2', '50%');
-      svgSeparatorLine.setAttribute('y2', '90%');
-      
-      svgSeparator.appendChild(svgSeparatorLine);
-      separatorContainer.appendChild(svgSeparator);
-    } else if (type === 'section') {
-      separatorContainer.classList.add('section-separator-container');
-    }
-    return separatorContainer;
-  };
   const generateRecipes = () => {
     function Recipe({ name = 'Food', description = 'Description', price = '$999.99' }) {
       this.name = name;
       this.description = description;
       this.price = price;
     }
+
     const recipe1 = new Recipe({ name: 'Eggs Benedict', description: 'Eggs Benedict, poached eggs over bacon and buttered toasted English muffin, topped with Hollandaise sauce.', price: '$6.99' });
     const recipe2 = new Recipe({ name: 'Garlic Snails', description: 'Baked in garlic butter, topped with mozzarella cheese and served with brown bread.', price: '$5.99' });
     const recipe3 = new Recipe({ name: 'Carpaccio Cipriani', description: 'Thinly sliced raw beef fillet topped with fresh rocket, shaved parmesan & a Cipriani dressing.', price: '$9.99' });
@@ -70,15 +44,12 @@ const menu = (() => {
   const displayToPage = () => {
     const mainDisplay = document.getElementById('main-content-display');
     const recipes = generateRecipes();
-    const pElements = [];
-
     const menuRecipesContainer = document.createElement('div');
     menuRecipesContainer.classList.add('menu-recipes-container');
 
     // [_1_____2_]
 
     for (let i = 0; i < recipes.length; i += 1) {
-
       const currentRecipeContainer = document.createElement('div');
       const currentTextContainer = document.createElement('div');
       const currentPriceContainer = document.createElement('div');
@@ -87,7 +58,7 @@ const menu = (() => {
       const currentBox = createBox(1, 50);
 
       currentRecipeContainer.classList.add('recipe-container');
-      currentTextContainer.classList.add('recipe-text-container')
+      currentTextContainer.classList.add('recipe-text-container');
       currentPriceContainer.classList.add('recipe-price-container');
 
 
