@@ -5,7 +5,6 @@ const mainContentDisplayContainer = document.createElement('div');
 
 const layout = (() => {
   const displayCoverStyle = () => {
-    console.log('-- COVER STYLE --');
     /* Background */
     const contentWrapper = document.getElementById('content');
     contentWrapper.classList.add('content-wrapper');
@@ -234,7 +233,6 @@ const layout = (() => {
       pageOneTabContainer1.appendChild(pageOneTabTextSpan1);
       pageOneTabsContainer.appendChild(pageOneTabContainer1);
     } else if (activeTab === 3) {
-      console.log('ACTIVE!');
       const pageOneTabsContainer = document.createElement('div');
       pageOneTabsContainer.classList.add('page-one-active-tab-3-container');
       pageOneActiveTabs.appendChild(pageOneTabsContainer);
@@ -351,7 +349,6 @@ const layout = (() => {
   }
 
   const displayPageOneStyle = () => {
-    console.log('-- PAGE ONE STYLE --');
     /* Background */
     const contentWrapper = document.getElementById('content');
     contentWrapper.classList.add('content-wrapper');
@@ -412,13 +409,9 @@ const layout = (() => {
     const tabsContainer = document.getElementsByClassName('page-one-tabs-container');
     bottomTabs.textContent = '';
 
-
     for (let i = 0; i < underlayTabs.length; i += 1) {
-      console.log(underlayTabs[i]);
       underlayTabs[i].remove();
     }
-    //underlayTabs[0].remove();
-    console.log(underlayTabs);
   };
 
   const displayTabsToPage = (tabIndex) => {

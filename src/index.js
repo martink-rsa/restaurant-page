@@ -56,7 +56,6 @@ const RestaurantMain = (() => {
   const showModule = (newModule) => {
     if (newModule === 'home') {
       clearContent();
-      console.log('showModule(): home');
       home.displayToPage();
       layout.displayTabsToPage(1);
       
@@ -76,7 +75,6 @@ const RestaurantMain = (() => {
   };
 
   const setEvents = (currentLayout) => {
-    console.log('CALL: setEvents()');
     if (currentLayout === 'page1') {
       const tabBtn1 = document.getElementById('tab-btn-1');
       const tabBtn2 = document.getElementById('tab-btn-2');
@@ -88,15 +86,11 @@ const RestaurantMain = (() => {
       });
       tabBtn2.addEventListener('click', () => {
         showModule('menu');
-        console.log('menu click');
       });
       tabBtn3.addEventListener('click', () => {
         showModule('contact');
-        console.log('contact click');
-
       });
       tabBtn4.addEventListener('click', () => {
-        console.log('about click');
         showModule('about');
       });
     }

@@ -18,7 +18,6 @@ const contact = (() => {
 
       const svgSeparator = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
       svgSeparator.setAttributeNS('http://www.w3.org/2000/xmlns/', 'xmlns:xlink', 'http://www.w3.org/1999/xlink');
-      // svgSeparator.setAttribute('viewbox', '0 0 90 90');
       
       svgSeparator.classList.add('svg-box-separator-container');
 
@@ -37,15 +36,8 @@ const contact = (() => {
     return separatorContainer;
   };
   const displayToPage = () => {
-    console.log('contact: displayToPage()');
-
     const mainDisplay = document.getElementById('main-content-display');
 
-/*     const breakTag1 = document.createElement('br');
-    const breakTag2 = document.createElement('br');
-    const breakTag3 = document.createElement('br');
-    const breakTag4 = document.createElement('br');
-    const breakTag5 = document.createElement('br'); */
     const paraTag1 = document.createElement('p');
     const paraTag2 = document.createElement('p');
     const paraTag3 = document.createElement('p');
@@ -73,8 +65,6 @@ const contact = (() => {
     contactTopBox1.appendChild(paraTag3);
     contactTopBox1.appendChild(paraTag4);
     contactTopBox1.appendChild(paraTag5);
-    // contactTopBox1.appendChild(breakTag1);
-
 
     const contactTopBox2 = createBox(1, 100);
 
@@ -90,41 +80,11 @@ const contact = (() => {
     contactTopBox2.appendChild(paraTag9);
     contactTopBox2.appendChild(paraTag10);
 
-    /*
-      Street
-        4912  Woodland Avenue
-      City
-        Hammond
-      State
-        LA
-      State Full
-        Louisiana
-      Zip Code
-        70401
-      Phone Number
-        985-549-1279
-
-      Street
-        3964  Prudence Street
-      City
-        Taylor
-      State
-        MI
-      State Full
-        Michigan
-      Zip Code
-        48180
-      Phone Number
-        313-299-7107
-     */
-
-
     contactTopContainer.appendChild(contactTopBox1);
     contactTopContainer.appendChild(createSeparator('box'));
     contactTopContainer.appendChild(contactTopBox2);
 
     mainDisplay.appendChild(contactTopContainer);
-
 
     const contactFeatureContainer = document.createElement('div');
     contactFeatureContainer.classList.add('contact-top-container');

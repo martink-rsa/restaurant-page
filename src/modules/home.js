@@ -41,7 +41,6 @@ const home = (() => {
   };
 
   const displayToPage = () => {
-    console.log('home: displayToPage()');
 
     const mainDisplay = document.getElementById('main-content-display');
     // mainDisplay.textContent = '';

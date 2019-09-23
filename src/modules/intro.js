@@ -1,7 +1,6 @@
 import { mainContentDisplayContainer } from './layout';
 const intro = (() => {
   const displayToPage = () => {
-    console.log('intro: displayToPage()');
 
     /* Logo */
     const logoMainContainer = document.createElement('div');
